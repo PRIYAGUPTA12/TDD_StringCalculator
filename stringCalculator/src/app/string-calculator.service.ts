@@ -11,9 +11,10 @@ export class StringCalculatorService {
      if (!numbers) {
       return 0;
     }
-
+    const delimiter =/[ ,\n\r\\n]+/;
+    
     // Split the string by commas (or new lines) and convert each number from string to integer
-    const numArray = numbers.split(",").map(num => parseInt(num, 10));
+    const numArray = numbers.split(delimiter).map(num => parseInt(num, 10));
 
     // Sum the numbers and ignore NaN values
     return numArray.reduce((sum, currentNum) => {
