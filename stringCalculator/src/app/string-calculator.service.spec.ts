@@ -56,6 +56,10 @@ describe('StringCalculatorService', () => {
     expect(service.add('//;\n1;2')).toBe(3);
        
   });
+  it('should return negative integer before applying the functionality of not accepting negative numbers ', () => {
+    expect(service.add('-1,-2')).toBe(-3);
+       
+  });
 
 
 
