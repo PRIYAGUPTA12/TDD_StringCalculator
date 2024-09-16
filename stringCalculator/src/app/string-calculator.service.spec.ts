@@ -46,6 +46,12 @@ describe('StringCalculatorService', () => {
   it('should return the sum of multiple numbers separated by commas', () => {
     expect(service.add('/n2/n5')).toBe(7);
     
+    
+  });
+  it('should return the sum of multiple numbers separated by commas', () => {
+    expect(service.add('/n2/n5;6')).toBe(13);
+    
+    
   });
 
 });
