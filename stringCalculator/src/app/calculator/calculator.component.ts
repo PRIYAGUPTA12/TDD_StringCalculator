@@ -14,6 +14,7 @@ export class CalculatorComponent {
   input: string = '';
   result: number | null = null;
   error: string | null = null;
+  
 
   constructor(private calculatorService: StringCalculatorService) {}
 
