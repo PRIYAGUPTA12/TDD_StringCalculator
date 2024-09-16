@@ -39,19 +39,24 @@ describe('StringCalculatorService', () => {
     expect(service.add('1\n2,3')).toBe(6);
     
   });
-  it('should return the sum of multiple numbers separated by commas', () => {
+  it('should return the sum of multiple numbers separated by new line', () => {
     expect(service.add('1\n3')).toBe(4);
     
   });
-  it('should return the sum of multiple numbers separated by commas', () => {
+  it('should return the sum of multiple numbers separated by new line', () => {
     expect(service.add('/n2/n5')).toBe(7);
     
     
   });
-  it('should return the sum of multiple numbers separated by commas', () => {
+  it('should return the sum of multiple numbers separated by combination of comma,new line,semicolon ', () => {
     expect(service.add('/n2/n5;6')).toBe(13);
-    
-    
+       
   });
+  it('should return the sum of multiple numbers separated by different delimiters', () => {
+    expect(service.add('//;\n1;2')).toBe(3);
+       
+  });
+
+
 
 });

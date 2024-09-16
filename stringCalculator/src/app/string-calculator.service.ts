@@ -11,7 +11,7 @@ export class StringCalculatorService {
      if (!numbers) {
       return 0;
     }
-    const delimiter =/[ ,\n\r\\n]+/;
+    const delimiter =/[ ,\n\r;\\n]+/;
     
     // Split the string by commas (or new lines) and convert each number from string to integer
     const numArray = numbers.split(delimiter).map(num => parseInt(num, 10));
