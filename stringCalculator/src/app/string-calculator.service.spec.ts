@@ -31,5 +31,9 @@ describe('StringCalculatorService', () => {
     expect(service.add('1,2,3')).toBe(6);
     expect(service.add('5,10,15')).toBe(30);
   });
+  it('should return the sum of multiple numbers separated by commas', () => {
+    expect(service.add('1,2,,,3')).toBe(6);
+    expect(service.add(',')).toBe(0);
+  });
 
 });
